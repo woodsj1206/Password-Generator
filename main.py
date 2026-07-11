@@ -44,15 +44,19 @@ def parse_arguments():
 
 def sample(sequence, n):
   """Returns a new list containing n unique elements selected from the sequence."""
-  if n > len(sequence) or n < 0:
-    raise ValueError("Sample is greater than the length of the sequence or negative")
+  if not isinstance(sequence, (list, tuple, str)):
+    raise TypeError("Sequence must be a list, tuple, or str.")
+  if not isinstance(n, int) or n < 0:
+    raise ValueError("Sample size n must be a non-negative integer.")
+  if n > len(sequence):
+    raise ValueError("Sample size n cannot be larger than the length of the sequence.")
   if n == 0:
     return []
 
   res = []
   indices = [i for i in range(len(sequence))]
 
-  for i in range(n):
+  for _ in range(n):
     index = secrets.choice(indices)
     res.append(sequence[index])
     indices.remove(index)
