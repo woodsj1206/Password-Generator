@@ -14,28 +14,28 @@ def parse_arguments():
     "--num_upper_chars",
     type=int,
     default=2,
-    help="The number of uppercase letters (A-Z) that will appear in the password."
+    help="The number of uppercase letters (A-Z) that will appear in the password. Default is 2."
   )
   
   parser.add_argument(
     "--num_lower_chars",
     type=int,
     default=3,
-    help="The number of lowercase letters (a-z) that will appear in the password."
+    help="The number of lowercase letters (a-z) that will appear in the password. Default is 3."
   )
   
   parser.add_argument(
     "--num_digits",
     type=int,
     default=2,
-    help="The number of digits (0-9) that will appear in the password."
+    help="The number of digits (0-9) that will appear in the password. Default is 2."
   )
   
   parser.add_argument(
     "--num_special_chars",
     type=int,
     default=1,
-    help="The number of special characters that will appear in the password."
+    help="The number of special characters that will appear in the password. Default is 1."
   )
   
   args = parser.parse_args()
