@@ -43,8 +43,9 @@ def parse_arguments():
 
 
 def sample(sequence, n):
+  """Returns a new list containing n unique elements selected from the sequence."""
   if n > len(sequence) or n < 0:
-    raise ValueError("Sample larger than length of sequence or is negative")
+    raise ValueError("Sample is greater than the length of the sequence or negative")
   if n == 0:
     return []
 
