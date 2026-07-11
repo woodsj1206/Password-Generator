@@ -1,5 +1,5 @@
 # Password-Generator
-This project generates a password containing uppercase characters, lowercase characters, special characters, and digits.
+This project generates a random password containing uppercase characters, lowercase characters, special characters, and digits.
 
 ## Usage
 Follow the steps below to set up and run the program:
