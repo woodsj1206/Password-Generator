@@ -2,7 +2,7 @@
 # Author: woodsj1206 (https://github.com/woodsj1206)
 # Description: A Python program that generates a password containing uppercase characters, lowercase characters, special characters, and digits.
 # Date Created: 6/4/2026
-# Last Modified: 7/11/2026
+# Last Modified: 7/13/2026
 
 import secrets
 import argparse
@@ -70,10 +70,10 @@ def generate_password(num_upper_chars, num_lower_chars, num_digits, num_special_
   digits = "0123456789"
   specials = "~!@#$%^&*()_+-=`{}|:\"<>?[]\\;',./"
   
-  random_upper_chars = [secrets.choice(capital_letters) for i in range(num_upper_chars)]
-  random_lower_chars = [secrets.choice(lowercase_letters) for i in range(num_lower_chars)]
-  random_digits = [secrets.choice(digits) for i in range(num_digits)]
-  random_special_chars = [secrets.choice(specials) for i in range(num_special_chars)]
+  random_upper_chars = [secrets.choice(capital_letters) for _ in range(num_upper_chars)]
+  random_lower_chars = [secrets.choice(lowercase_letters) for _ in range(num_lower_chars)]
+  random_digits = [secrets.choice(digits) for _ in range(num_digits)]
+  random_special_chars = [secrets.choice(specials) for _ in range(num_special_chars)]
   
   password = random_upper_chars + random_lower_chars + random_digits + random_special_chars
   shuffled_password = sample(password, len(password))
